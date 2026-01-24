@@ -1,0 +1,69 @@
+/* Styling Hari 2 - Branding Pakelan */
+
+:root {
+    --primary-color: #4B24B3; /* Ungu Pakelan */
+    --accent-color: #FDD835;  /* Kuning Emas */
+    --text-dark: #212529;
+    --bg-light: #F8F9FA;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+}
+
+h1, h2, h3, .navbar-brand {
+    font-family: 'Playfair Display', serif; /* Font Klasik */
+}
+
+/* Navbar Custom */
+.navbar-pakelan {
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.navbar-brand img {
+    height: 45px; /* Kunci tingginya (bisa diubah ke 40px - 60px sesuai selera) */
+    width: auto;  /* Lebar akan menyesuaikan agar logo tidak gepeng */
+    margin-right: 10px; /* Jarak antara logo dan teks tulisan */
+    object-fit: contain; /* Memastikan gambar tetap utuh dalam bingkainya */
+}
+
+/* Hero Section dengan Background Image */
+.hero-section {
+    /* Ganti 'bg-desa.jpg' dengan nama file foto utama Anda */
+    background: linear-gradient(rgba(75, 36, 179, 0.8), rgba(75, 36, 179, 0.6)), url('assets/img/bg-desa.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+}
+
+/* Tombol Aksi */
+.btn-primary-custom {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-weight: bold;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+.btn-primary-custom:hover {
+    background-color: #e6c200;
+    transform: translateY(-2px);
+    color: var(--primary-color);
+}
+
+/* Kartu Info */
+.info-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--primary-color);
+    margin-bottom: 20px;
+}
