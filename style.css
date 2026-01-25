@@ -84,3 +84,49 @@ h1, h2, h3, .navbar-brand {
         height: 350px; /* Di HP jangan terlalu tinggi biar mudah scroll */
     }
 }
+
+.footer-pakelan {
+    background-color: var(--primary-color); /* Ungu Pakelan */
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+}
+
+.footer-pakelan hr {
+    border-color: var(--accent-color); /* Garis kuning */
+    opacity: 0.5;
+}
+
+/* --- MOBILE RESPONSIVE AREA --- */
+@media (max-width: 768px) {
+    
+    /* 1. Judul Hero tidak boleh terlalu besar di HP */
+    .hero-section h1 {
+        font-size: 2.5rem; /* Mengecil dari ukuran desktop */
+    }
+    
+    .hero-section p {
+        font-size: 1rem;
+        padding: 0 20px; /* Memberi jarak agar teks tidak mepet pinggir layar */
+    }
+
+    /* 2. Peta tidak boleh terlalu tinggi */
+    /* Agar user tidak capek scroll melewati peta */
+    #map {
+        height: 350px !important; 
+        margin-bottom: 30px;
+    }
+
+    /* 3. Info Card (Alamat/Jam Buka) ditumpuk rapi */
+    .info-card {
+        margin-bottom: 15px; /* Jarak antar kartu saat ditumpuk vertikal */
+        padding: 20px; /* Padding lebih kecil hemat tempat */
+    }
+
+    /* 4. Navbar Logo */
+    .navbar-brand {
+        font-size: 1.1rem; /* Nama desa sedikit mengecil */
+    }
+    
+    .navbar-brand img {
+        height: 35px; /* Logo mengecil */
+    }
+}
