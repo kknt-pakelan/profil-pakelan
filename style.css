@@ -67,3 +67,20 @@ h1, h2, h3, .navbar-brand {
     border-top: 5px solid var(--primary-color);
     margin-bottom: 20px;
 }
+
+/* Styling Peta Hari 3 */
+#map {
+    height: 500px; /* Tinggi peta di Laptop */
+    width: 100%;
+    border-radius: 15px; /* Biar ujungnya melengkung cantik */
+    border: 5px solid var(--primary-color); /* Bingkai ungu Pakelan */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    z-index: 1; /* Agar tidak menutupi Navbar */
+}
+
+/* Penyesuaian untuk HP */
+@media (max-width: 768px) {
+    #map {
+        height: 350px; /* Di HP jangan terlalu tinggi biar mudah scroll */
+    }
+}
