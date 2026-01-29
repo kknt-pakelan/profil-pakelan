@@ -1,5 +1,7 @@
 /* Styling Hari 2 - Branding Pakelan */
-
+html {
+    scroll-behavior: smooth;
+}
 :root {
     --primary-color: #4B24B3; /* Ungu Pakelan */
     --accent-color: #FDD835;  /* Kuning Emas */
@@ -11,16 +13,20 @@ body {
     font-family: 'Poppins', sans-serif;
     color: var(--text-dark);
     background-color: var(--bg-light);
+    scroll-behavior: smooth;
+    scroll-horizontal: none;
 }
 
 h1, h2, h3, .navbar-brand {
-    font-family: 'Playfair Display', serif; /* Font Klasik */
+    /* font-family: 'Playfair Display', serif;  */
+    font-family: Poppins, sans-serif;
 }
 
 /* Navbar Custom */
 .navbar-pakelan {
     background-color: var(--primary-color);
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    color: white;
 }
 
 .navbar-brand img {
@@ -33,7 +39,8 @@ h1, h2, h3, .navbar-brand {
 /* Hero Section dengan Background Image */
 .hero-section {
     /* Ganti 'bg-desa.jpg' dengan nama file foto utama Anda */
-    background: linear-gradient(rgba(75, 36, 179, 0.8), rgba(75, 36, 179, 0.6)), url('assets/img/bg-desa.jpg');
+    /* background: linear-gradient(rgba(75, 36, 179, 0.8), rgba(75, 36, 179, 0.6)), url('assets/img/bg-desa.jpg'); */
+    background: linear-gradient(rgba(73, 46, 147, 0.8), rgba(68, 41, 145, 0.6)), url('assets/img/bg-desa.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -128,5 +135,16 @@ h1, h2, h3, .navbar-brand {
     
     .navbar-brand img {
         height: 35px; /* Logo mengecil */
+    }
+}
+
+@media (max-width: 480px) {
+ .hero-section h1 {
+        font-size: 1.5rem; /* Mengecil dari ukuran desktop */
+    }
+    
+    .hero-section p {
+        font-size: 0.5rem;
+        padding: 0 10px; /* Memberi jarak agar teks tidak mepet pinggir layar */
     }
 }

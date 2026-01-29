@@ -36,6 +36,7 @@ markerKantor.bindPopup("<b>Kantor Kelurahan Pakelan</b><br>Pusat Pelayanan Warga
 var markerKelenteng = L.marker([-7.819991724537468, 112.00959693836458], {icon: klentengIcon}).addTo(map);
 markerKelenteng.bindPopup("<b>Kelenteng Tjoe Hwie Kiong</b><br>Ikon Wisata Heritage.");
 
+
 // Marker Gereja Pusat Pantekosta Indonesia
 var markerGerejaPusat = L.marker([-7.814269955615778, 112.01172826582454], {icon: gerejaIcon}).addTo(map);
 markerGerejaPusat.bindPopup("<b>Gereja Pusat Pantekosta Indonesia</b>");
