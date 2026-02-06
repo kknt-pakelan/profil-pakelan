@@ -1,155 +1,192 @@
-/* Styling Hari 2 - Branding Pakelan */
-html {
-  scroll-behavior: smooth;
-}
 :root {
-  --primary-color: #6b40e3; /* Ungu Pakelan */
-  /* --primary-color: #4B24B3;  */
-  --accent-color: #fdd835; /* Kuning Emas */
-  --text-dark: #212529;
-  --bg-light: #f8f9fa;
+  --primary: #5b3df5;
+  --primary-dark: #432adf;
+  --accent: #f6c90e;
+  --bg-main: #f5f7fb;
+  --glass: rgba(255, 255, 255, 0.75);
+  --text-main: #1f2937;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  color: var(--text-dark);
-  background-color: var(--bg-light);
-  scroll-behavior: smooth;
-  scroll-horizontal: none;
+  background: var(--bg-main);
+  color: var(--text-main);
+  overflow-x: hidden;
 }
 
-h1,
-h2,
-h3,
-.navbar-brand {
-  /* font-family: 'Playfair Display', serif;  */
-  font-family: Poppins, sans-serif;
-}
-
-/* Navbar Custom */
 .navbar-pakelan {
-  background-color: var(--primary-color);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  color: white;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
 }
 
 .navbar-brand img {
-  height: 45px; /* Kunci tingginya (bisa diubah ke 40px - 60px sesuai selera) */
-  width: auto; /* Lebar akan menyesuaikan agar logo tidak gepeng */
-  margin-right: 10px; /* Jarak antara logo dan teks tulisan */
-  object-fit: contain; /* Memastikan gambar tetap utuh dalam bingkainya */
+  height: 36px;
+  margin-right: 8px;
 }
 
-/* Hero Section dengan Background Image */
+.nav-item a {
+  color: var(--bg-main);
+}
+.nav-item a:hover {
+  color: var(--glass);
+}
+
+/* HERO */
 .hero-section {
-  /* Ganti 'bg-desa.jpg' dengan nama file foto utama Anda */
-  /* background: linear-gradient(rgba(75, 36, 179, 0.8), rgba(75, 36, 179, 0.6)), url('assets/img/bg-desa.jpg'); */
-  background: linear-gradient(rgba(73, 46, 147, 0.8), rgba(68, 41, 145, 0.6)),
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(rgba(67, 42, 223, 0.75), rgba(67, 42, 223, 0.55)),
     url("assets/img/bg-desa.jpg");
   background-size: cover;
-  background-position: center;
+  background-attachment: fixed;
   color: white;
-  padding: 120px 0;
-  text-align: center;
 }
 
-/* Tombol Aksi */
+.hero-section h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+}
+
 .btn-primary-custom {
-  background-color: var(--accent-color);
-  color: white;
-  text-shadow: 1px 1px 2px#212529;
-  font-weight: bold;
+  background: linear-gradient(135deg, var(--accent), #ffd84d);
+  border-radius: 999px;
+  padding: 14px 36px;
+  font-weight: 600;
   border: none;
-  padding: 12px 30px;
-  border-radius: 50px;
-  transition: all 0.3s;
+  transition: 0.3s;
 }
 
 .btn-primary-custom:hover {
-  background-color: #e6c200;
-  transform: translateY(-2px);
-  /* color: var(--primary-color); */
+  transform: translateY(-4px);
 }
 
-/* Kartu Info */
-.info-card {
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  border-top: 5px solid var(--primary-color);
-  margin-bottom: 20px;
+/* SECTION */
+.section-padding {
+  padding: 100px 0;
 }
 
-/* Styling Peta Hari 3 */
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+  font-weight: 700;
+}
+
+/* MAP */
 #map {
-  height: 500px; /* Tinggi peta di Laptop */
-  width: 100%;
-  border-radius: 15px; /* Biar ujungnya melengkung cantik */
-  border: 5px solid var(--primary-color); /* Bingkai ungu Pakelan */
-  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.5);
-  z-index: 1; /* Agar tidak menutupi Navbar */
+  height: 520px;
+  border-radius: 24px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
 }
 
-/* Penyesuaian untuk HP */
-@media (max-width: 768px) {
-  #map {
-    height: 350px; /* Di HP jangan terlalu tinggi biar mudah scroll */
-  }
+/* ACCORDION */
+.accordion-item {
+  border: none;
+  margin-bottom: 16px;
+  border-radius: 16px;
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+}
+
+.accordion-button {
+  font-weight: 600;
+  background: transparent;
+}
+
+.accordion-button:not(.collapsed) {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+}
+
+.accordion-body img {
+  border-radius: 14px;
+  transition: 0.4s;
+}
+
+.accordion-body img:hover {
+  transform: scale(1.05);
+}
+
+/* FOOTER */
+.footer-wave {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--bg-main);
+  margin-bottom: -1px;
 }
 
 .footer-pakelan {
-  background-color: var(--primary-color); /* Ungu Pakelan */
-  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+  background: var(--primary-dark);
+  color: white;
+  padding-top: 10px;
+  position: relative;
 }
 
-.footer-pakelan hr {
-  border-color: var(--accent-color); /* Garis kuning */
-  opacity: 0.5;
+.text-white-50 {
+  color: rgba(255, 255, 255, 0.6) !important;
 }
 
-/* --- MOBILE RESPONSIVE AREA --- */
-@media (max-width: 768px) {
-  /* 1. Judul Hero tidak boleh terlalu besar di HP */
-  .hero-section h1 {
-    font-size: 2.5rem; /* Mengecil dari ukuran desktop */
-  }
-
-  .hero-section p {
-    font-size: 1rem;
-    padding: 0 20px; /* Memberi jarak agar teks tidak mepet pinggir layar */
-  }
-
-  /* 2. Peta tidak boleh terlalu tinggi */
-  /* Agar user tidak capek scroll melewati peta */
-  #map {
-    height: 350px !important;
-    margin-bottom: 30px;
-  }
-
-  /* 3. Info Card (Alamat/Jam Buka) ditumpuk rapi */
-  .info-card {
-    margin-bottom: 15px; /* Jarak antar kartu saat ditumpuk vertikal */
-    padding: 20px; /* Padding lebih kecil hemat tempat */
-  }
-
-  /* 4. Navbar Logo */
-  .navbar-brand {
-    font-size: 1.1rem; /* Nama desa sedikit mengecil */
-  }
-
-  .navbar-brand img {
-    height: 35px; /* Logo mengecil */
-  }
+/* Social Icons */
+.social-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: 0.3s all;
+  text-decoration: none;
+  font-size: 1.1rem;
 }
 
-@media (max-width: 480px) {
-  .hero-section h1 {
-    font-size: 1.5rem; /* Mengecil dari ukuran desktop */
-  }
+.social-link:hover {
+  background: var(--accent);
+  color: var(--primary-dark);
+  transform: translateY(-3px);
+}
 
-  .hero-section p {
-    font-size: 0.5rem;
-    padding: 0 10px; /* Memberi jarak agar teks tidak mepet pinggir layar */
-  }
+/* Footer Links */
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+  padding-left: 8px;
+}
+
+/* Contact Info */
+.contact-info li {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+}
+
+/* FAB */
+.fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--primary);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: white;
+  box-shadow: 0 20px 40px rgba(91, 61, 245, 0.4);
+  cursor: pointer;
 }
