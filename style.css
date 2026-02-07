@@ -47,6 +47,16 @@ body {
 }
 
 /* HERO */
+.img-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.img-container img {
+  height: 80px;
+  width: auto;
+}
 .hero-section {
   min-height: 100vh;
   display: flex;
