@@ -889,7 +889,78 @@
         </div>
       </div>
     </section>
+    <section id="kontak" class="section-padding bg-light pb-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="section-title text-center mb-4" data-aos="fade-up">
+              <h2>Koreksi & Tambahan Informasi</h2>
+              <p>
+                Menemukan data yang kurang tepat atau memiliki informasi tambahan mengenai
+                sejarah/tempat di Pakelan? Bantu kami melengkapi website ini.
+              </p>
+            </div>
 
+            <div class="card shadow-sm border-0 rounded-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="card-body p-4 p-md-5">
+                <form action="https://formspree.io/f/meelodpg" method="POST">
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="nama" class="form-label fw-bold">Nama / Institusi</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="nama"
+                        name="nama"
+                        placeholder="Nama Anda"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="kontak" class="form-label fw-bold">Kontak (WA/Email)</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="kontak"
+                        name="kontak"
+                        placeholder="Agar kami bisa mengonfirmasi info"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="kategori" class="form-label fw-bold">Jenis Laporan</label>
+                    <select class="form-select" id="kategori" name="kategori">
+                      <option value="Koreksi Data">Koreksi Data Salah</option>
+                      <option value="Tambahan Info">Usulan Tambahan Informasi</option>
+                      <option value="Lainnya">Lainnya</option>
+                    </select>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="pesan" class="form-label fw-bold">Detail Informasi</label>
+                    <textarea
+                      class="form-control"
+                      id="pesan"
+                      name="pesan"
+                      rows="4"
+                      placeholder="Contoh: 'Sejarah Masjid Al-Hidayah di paragraf 2 kurang tepat, seharusnya tahun berdiri adalah...'"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="d-grid">
+                    <button type="submit" class="btn btn-primary" style="background-color: #0d6efd">
+                      <i class="fas fa-paper-plane me-2"></i>Kirim Laporan
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- FOOTER -->
     <footer class="footer-pakelan text-white pt-4 pb-4">
       <div class="container">
